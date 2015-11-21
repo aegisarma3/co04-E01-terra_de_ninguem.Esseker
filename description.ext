@@ -1,1 +1,33 @@
-#include "zona_de_combate_ACE.hpp"
+#include "aegis\functions.hpp"
+
+author = "Toaster & Collumbus";
+onLoadName = "Terra de Ninguém";
+onLoadMission = "PMC AEGIS inicia seu contrato mais perigoso até hoje.";
+loadScreen = "images\intro.jpg";
+overviewPicture = "images\intro.paa";
+overviewText = "PMC AEGIS inicia seu contrato mais perigoso até hoje.";
+
+
+
+enableDebugConsole = 1;
+respawn            = 4;
+respawnTemplates[] = {"ace_spectator"};
+DisabledAI = true;
+
+
+corpseLimit = 4;
+corpseRemovalMinTime = 20;
+corpseRemovalMaxTime = 35;
+
+
+wreckLimit = 3;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 120;
+
+
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 8;
+};

@@ -25,11 +25,11 @@ if(isServer) then {if(local player) then {DAC_Code = 1} else {DAC_Code = 0}} els
 	if(isNil "DAC_AI_Spawn") 		then {		DAC_AI_Spawn		= [[10,5,5],[10,5,15],0,120,250,0]			};
 	if(isNil "DAC_Delete_Value") 	then {		DAC_Delete_Value	= [[180,150],[180,150],6000]				};
 	if(isNil "DAC_Del_PlayerBody") 	then {		DAC_Del_PlayerBody	= [0,0]										};
-	if(isNil "DAC_Com_Values") 		then {		DAC_Com_Values		= [1,2,0,1]									}; // 0,0,0,0 para deixar sem debug
+	if(isNil "DAC_Com_Values") 		then {		DAC_Com_Values		= [0,0,0,0]									}; // 0,0,0,0 para deixar sem debug
 	if(isNil "DAC_AI_AddOn") 		then {		DAC_AI_AddOn		= 1											};
 	if(isNil "DAC_AI_Level") 		then {		DAC_AI_Level		= 3											};
 	if(isNil "DAC_Res_Side") 		then {		DAC_Res_Side		= 0											};
-	if(isNil "DAC_Marker") 			then {		DAC_Marker			= 1											}; // Marker para debug
+	if(isNil "DAC_Marker") 			then {		DAC_Marker			= 0											}; // Marker para debug
 	if(isNil "DAC_WP_Speed") 		then {		DAC_WP_Speed		= 0.01										};
 	if(isNil "DAC_Join_Action")		then {		DAC_Join_Action		= false										};
 	if(isNil "DAC_Fast_Init") 		then {		DAC_Fast_Init		= false										};
