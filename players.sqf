@@ -22,6 +22,7 @@ this linkItem "ItemRadioAcreFlagged";
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
+
 removeAllWeapons this;
 removeAllItems this;
 removeAllAssignedItems this;
@@ -32,7 +33,7 @@ removeHeadgear this;
 removeGoggles this;
 
 
-this forceAddUniform "TRYK_U_B_RED_T_BR";
+this forceAddUniform "TRYK_SUITS_BLK_F";
 this addBackpack "B_Parachute";
 
 this linkItem "ItemMap";
@@ -126,6 +127,7 @@ this linkItem "ItemRadioAcreFlagged";
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
 removeAllWeapons this;
 removeAllItems this;
 removeAllAssignedItems this;
@@ -136,7 +138,7 @@ removeHeadgear this;
 removeGoggles this;
 
 
-this forceAddUniform "TRYK_SUITS_BLK_F";
+this forceAddUniform "TRYK_U_B_RED_T_BR";
 this addBackpack "B_Parachute";
 
 this linkItem "ItemMap";
