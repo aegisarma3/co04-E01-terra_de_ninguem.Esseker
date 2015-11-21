@@ -7,6 +7,7 @@ A escrever...
 
 # ![logo](images/MODS_README.jpg)
 Todos os mods abaixo são necessários para a campanha.
+- [@ASR_AI3](http://www.armaholic.com/page.php?id=24080)
 - [@ace3](https://github.com/acemod/ACE3/releases/download/v3.3.2/ace3_3.3.2.zip)
 - [@acre2](http://acre.idi-systems.com/archive/acre2_2.1.0.763.zip)
 - [@aegis](https://github.com/aegisarma3/ASIN/releases/download/v0.7/aegis.zip)
