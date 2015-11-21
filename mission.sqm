@@ -1575,6 +1575,7 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			idVehicle=0;
+			expActiv="""end1"" call BIS_fnc_endMission;";
 			class Effects
 			{
 			};

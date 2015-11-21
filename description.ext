@@ -31,3 +31,27 @@ class Header
 	minPlayers = 1;
 	maxPlayers = 8;
 };
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title = "Missão Cumprida";
+		subtitle = "Geradores destruídos";
+		description = "PMC AEGIS conseguiu destruir os geradores, abrindo caminho para transporte aéreo.";
+		pictureBackground = "";
+		picture = "b_inf";
+		pictureColor[] = {0.0,0.3,0.6,1};
+	};
+
+  class loser
+  {
+		title = "Missão Falhou";
+		subtitle = "Todo o grupo AEGIS morreu";
+		description = "Mesmo retornando fogo e lutando bravamente, o grupo AEGIS pereceu em campo de batalha.";
+		pictureBackground = "";
+		picture = "KIA";
+		pictureColor[] = {0.6,0.1,0.2,1};
+	};
+
+};
