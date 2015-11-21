@@ -16,7 +16,10 @@ class Mission
 		"A3_Structures_F_Ind_PowerLines",
 		"A3_Structures_F_Walls",
 		"A3_Structures_F_Civ_Lamps",
-		"A3_Structures_F_Mil_Cargo"
+		"A3_Structures_F_Mil_Cargo",
+		"A3_Soft_F_Gamma_Offroad",
+		"a3_soft_f_offroad_01",
+		"A3_Modules_F_Intel"
 	};
 	addOnsAuto[]=
 	{
@@ -27,33 +30,38 @@ class Mission
 		"a3_modules_f_curator_curator",
 		"dac_source",
 		"A3_Modules_F",
+		"A3_Modules_F_Intel",
 		"A3_Structures_F_Ind_DieselPowerPlant",
 		"A3_Structures_F_Civ_Pavements",
 		"A3_Structures_F_Ind_PowerLines",
 		"A3_Structures_F_Walls",
 		"A3_Structures_F_Civ_Lamps",
 		"A3_Structures_F_Mil_Cargo",
+		"A3_Soft_F_Gamma_Offroad",
+		"a3_soft_f_offroad_01",
 		"esseker"
 	};
 	randomSeed=1682796;
 	class Intel
 	{
 		resistanceWest=0;
-		startWeather=0.79999995;
+		startWeather=0.89999998;
+		startFog=0.099999994;
 		startWind=0;
-		forecastWeather=1;
+		forecastWeather=0.89999998;
+		forecastFog=0.19;
 		forecastWind=0;
 		forecastWaves=0;
 		year=2015;
 		month=11;
 		day=21;
-		hour=6;
+		hour=3;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
 	class Groups
 	{
-		items=6;
+		items=13;
 		class Item0
 		{
 			side="WEST";
@@ -69,7 +77,7 @@ class Mission
 					id=0;
 					side="WEST";
 					vehicle="B_Soldier_F";
-					player="PLAYER COMMANDER";
+					player="PLAY CDG";
 					leader=1;
 					rank="CAPTAIN";
 					skill=0.60000002;
@@ -81,7 +89,7 @@ class Mission
 				};
 				class Item1
 				{
-					position[]={2894.1721,172.19879,4112.5269};
+					position[]={2966.8416,173.28615,4138.269};
 					azimut=67.711899;
 					offsetY=5000;
 					special="NONE";
@@ -97,7 +105,7 @@ class Mission
 				};
 				class Item2
 				{
-					position[]={2880.1777,177.67853,4060.0461};
+					position[]={2968.4009,174.33725,4128.0522};
 					azimut=67.711899;
 					offsetY=5000;
 					special="NONE";
@@ -113,7 +121,7 @@ class Mission
 				};
 				class Item3
 				{
-					position[]={3032.3691,179.86679,4093.2825};
+					position[]={2997.3196,174.20395,4131.897};
 					azimut=67.711899;
 					offsetY=5000;
 					special="NONE";
@@ -129,7 +137,7 @@ class Mission
 				};
 				class Item4
 				{
-					position[]={3011.377,185.10695,4040.8037};
+					position[]={2988.5859,174.93779,4123.8809};
 					azimut=67.711899;
 					offsetY=5000;
 					special="NONE";
@@ -145,7 +153,7 @@ class Mission
 				};
 				class Item5
 				{
-					position[]={2978.1401,191.76489,3984.8247};
+					position[]={2979.6106,175.72293,4116.792};
 					azimut=67.711899;
 					offsetY=5000;
 					special="NONE";
@@ -161,7 +169,7 @@ class Mission
 				};
 				class Item6
 				{
-					position[]={2902.9189,191.59349,3972.5808};
+					position[]={2968.3513,175.452,4115.9434};
 					azimut=67.711899;
 					offsetY=5000;
 					special="NONE";
@@ -177,7 +185,7 @@ class Mission
 				};
 				class Item7
 				{
-					position[]={2864.4338,184.17685,4011.0645};
+					position[]={2977.6541,171.90315,4150.3838};
 					azimut=67.711899;
 					offsetY=5000;
 					special="NONE";
@@ -318,25 +326,442 @@ class Mission
 				};
 			};
 		};
+		class Item6
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2673.9597,143.59019,4591.5117};
+					azimut=39.84626;
+					special="NONE";
+					id=13;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					description="Líder de Equipe";
+				};
+			};
+		};
+		class Item7
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4971.2275,155.37065,4652.917};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="4";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="obj02";
+							parentCls="ModuleTaskCreate_F";
+							typeName="ID";
+						};
+						class Item2
+						{
+							value="Destruir transformadores";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Title";
+						};
+						class Item3
+						{
+							value="Destrua os transformadores de energia que alimentam as baterias anti-aérias de Esseker.";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Description";
+						};
+						class Item4
+						{
+							value="bomb01";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Marker";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Destination";
+						};
+						class Item6
+						{
+							value="ASSIGNED";
+							parentCls="ModuleTaskCreate_F";
+							typeName="State";
+						};
+					};
+					id=14;
+					side="LOGIC";
+					vehicle="ModuleTaskCreate_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=2;
+					synchronizations[]={8};
+				};
+			};
+		};
+		class Item8
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4974.2646,155.82126,4657.0449};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="4";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="obj02";
+							parentCls="ModuleTaskCreate_F";
+							typeName="ID";
+						};
+						class Item2
+						{
+							value="Destruir transformadores";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Title";
+						};
+						class Item3
+						{
+							value="Destrua os transformadores de energia que alimentam as baterias anti-aérias de Esseker.";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Description";
+						};
+						class Item4
+						{
+							value="bomb01";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Marker";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Destination";
+						};
+						class Item6
+						{
+							value="SUCCEEDED";
+							parentCls="ModuleTaskCreate_F";
+							typeName="State";
+						};
+					};
+					id=15;
+					side="LOGIC";
+					vehicle="ModuleTaskCreate_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=3;
+					synchronizations[]={7};
+				};
+			};
+		};
+		class Item9
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2651.8875,145.89125,4596.5781};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="4";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="obj01";
+							parentCls="ModuleTaskCreate_F";
+							typeName="ID";
+						};
+						class Item2
+						{
+							value="Fazer contato com Alexei Drovanov";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Title";
+						};
+						class Item3
+						{
+							value="Drovanov possui o equipamento necessário para executar a missão. ";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Description";
+						};
+						class Item4
+						{
+							value="contra01";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Marker";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Destination";
+						};
+						class Item6
+						{
+							value="ASSIGNED";
+							parentCls="ModuleTaskCreate_F";
+							typeName="State";
+						};
+					};
+					id=16;
+					side="LOGIC";
+					vehicle="ModuleTaskCreate_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item10
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={2657.063,145.06845,4596.5781};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="4";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="obj01";
+							parentCls="ModuleTaskCreate_F";
+							typeName="ID";
+						};
+						class Item2
+						{
+							value="Fazer contato com Alexei Drovanov";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Title";
+						};
+						class Item3
+						{
+							value="Drovanov possui o equipamento necessário para executar a missão. ";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Description";
+						};
+						class Item4
+						{
+							value="contra01";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Marker";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Destination";
+						};
+						class Item6
+						{
+							value="SUCCEEDED";
+							parentCls="ModuleTaskCreate_F";
+							typeName="State";
+						};
+					};
+					id=17;
+					side="LOGIC";
+					vehicle="ModuleTaskCreate_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=4;
+					synchronizations[]={8};
+				};
+			};
+		};
+		class Item11
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4616.5381,149.7903,5885.5859};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="4";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="obj03";
+							parentCls="ModuleTaskCreate_F";
+							typeName="ID";
+						};
+						class Item2
+						{
+							value="Reagrupar em área segura";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Title";
+						};
+						class Item3
+						{
+							value="Satélites mostram que o local é seguro para montar um acampamento. <br/>Reagrupe e espere novas ordens.";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Description";
+						};
+						class Item4
+						{
+							value="hq01";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Marker";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Destination";
+						};
+						class Item6
+						{
+							value="ASSIGNED";
+							parentCls="ModuleTaskCreate_F";
+							typeName="State";
+						};
+					};
+					id=18;
+					side="LOGIC";
+					vehicle="ModuleTaskCreate_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=5;
+					synchronizations[]={7};
+				};
+			};
+		};
+		class Item12
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4623.3892,148.22255,5885.5859};
+					class args
+					{
+						items=7;
+						class Item0
+						{
+							value="4";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="obj03";
+							parentCls="ModuleTaskCreate_F";
+							typeName="ID";
+						};
+						class Item2
+						{
+							value="Reagrupar em área segura";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Title";
+						};
+						class Item3
+						{
+							value="Satélites mostram que o local é seguro para montar um acampamento. <br/>Reagrupe e espere novas ordens.";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Description";
+						};
+						class Item4
+						{
+							value="hq01";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Marker";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleTaskCreate_F";
+							typeName="Destination";
+						};
+						class Item6
+						{
+							value="SUCCEEDED";
+							parentCls="ModuleTaskCreate_F";
+							typeName="State";
+						};
+					};
+					id=19;
+					side="LOGIC";
+					vehicle="ModuleTaskCreate_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=6;
+					synchronizations[]={9};
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
-		items=25;
+		items=26;
 		class Item0
 		{
 			position[]={5038.6265,162.50851,4662.8521};
 			azimut=79.1036;
-			id=13;
+			id=20;
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
+			text="trans01";
 			init="this enableSimulation true;this setdir 79.1036;this setposATL [5038.626465,4662.852051,0];this setVectorUp [0,0,1]";
 		};
 		class Item1
 		{
 			position[]={5038.5527,162.50636,4662.6318};
 			azimut=168.561;
-			id=14;
+			id=21;
 			side="EMPTY";
 			vehicle="Land_Pavement_wide_F";
 			skill=0.60000002;
@@ -346,7 +771,7 @@ class Mission
 		{
 			position[]={5034.6968,162.49844,4661.855};
 			azimut=168.561;
-			id=15;
+			id=22;
 			side="EMPTY";
 			vehicle="Land_Pavement_wide_F";
 			skill=0.60000002;
@@ -356,7 +781,7 @@ class Mission
 		{
 			position[]={5042.1519,162.51881,4663.3882};
 			azimut=168.561;
-			id=16;
+			id=23;
 			side="EMPTY";
 			vehicle="Land_Pavement_wide_F";
 			skill=0.60000002;
@@ -366,7 +791,7 @@ class Mission
 		{
 			position[]={5045.564,162.53351,4664.0786};
 			azimut=168.561;
-			id=17;
+			id=24;
 			side="EMPTY";
 			vehicle="Land_Pavement_wide_F";
 			skill=0.60000002;
@@ -376,7 +801,7 @@ class Mission
 		{
 			position[]={5048.9761,162.5892,4664.769};
 			azimut=168.561;
-			id=18;
+			id=25;
 			side="EMPTY";
 			vehicle="Land_Pavement_wide_F";
 			skill=0.60000002;
@@ -386,27 +811,29 @@ class Mission
 		{
 			position[]={5044.1421,162.53,4664.1255};
 			azimut=-102.083;
-			id=19;
+			id=26;
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
+			text="trans02";
 			init="this enableSimulation true;this setdir -102.083;this setposATL [5044.14209,4664.125488,0];this setVectorUp [0,0,1]";
 		};
 		class Item7
 		{
 			position[]={5049.21,162.59326,4665.0332};
 			azimut=77.171799;
-			id=20;
+			id=27;
 			side="EMPTY";
 			vehicle="Land_dp_transformer_F";
 			skill=0.60000002;
+			text="trans03";
 			init="this enableSimulation true;this setdir 77.1718;this setposATL [5049.209961,4665.0332031,0];this setVectorUp [0,0,1]";
 		};
 		class Item8
 		{
 			position[]={5042.2339,162.52924,4660.0942};
 			azimut=79.1036;
-			id=21;
+			id=28;
 			side="EMPTY";
 			vehicle="Land_HighVoltageTower_F";
 			skill=0.60000002;
@@ -416,7 +843,7 @@ class Mission
 		{
 			position[]={5047.6572,162.56375,4661.1382};
 			azimut=79.1036;
-			id=22;
+			id=29;
 			side="EMPTY";
 			vehicle="Land_HighVoltageTower_F";
 			skill=0.60000002;
@@ -427,7 +854,7 @@ class Mission
 			position[]={5034.7012,162.50079,4662.272};
 			azimut=79.1036;
 			offsetY=0.335022;
-			id=23;
+			id=30;
 			side="EMPTY";
 			vehicle="Land_PowLines_Transformer_F";
 			skill=0.60000002;
@@ -438,7 +865,7 @@ class Mission
 			position[]={5034.5801,162.56764,4669.1929};
 			azimut=154.166;
 			offsetY=-0.00083923299;
-			id=24;
+			id=31;
 			side="EMPTY";
 			vehicle="Land_PipeWall_concretel_8m_F";
 			skill=0.60000002;
@@ -449,7 +876,7 @@ class Mission
 			position[]={5041.4341,162.6114,4672.7104};
 			azimut=151.452;
 			offsetY=-0.051345799;
-			id=25;
+			id=32;
 			side="EMPTY";
 			vehicle="Land_PipeWall_concretel_8m_F";
 			skill=0.60000002;
@@ -460,7 +887,7 @@ class Mission
 			position[]={5048.8594,162.66496,4674.8096};
 			azimut=176.64101;
 			offsetY=-0.112793;
-			id=26;
+			id=33;
 			side="EMPTY";
 			vehicle="Land_PipeWall_concretel_8m_F";
 			skill=0.60000002;
@@ -471,7 +898,7 @@ class Mission
 			position[]={5056.6821,162.78329,4674.2744};
 			azimut=191.28799;
 			offsetY=-0.239059;
-			id=27;
+			id=34;
 			side="EMPTY";
 			vehicle="Land_PipeWall_concretel_8m_F";
 			skill=0.60000002;
@@ -481,7 +908,7 @@ class Mission
 		{
 			position[]={5059.8579,163.00479,4656.3413};
 			azimut=346.086;
-			id=28;
+			id=35;
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
@@ -492,7 +919,7 @@ class Mission
 			position[]={5052.124,162.85492,4654.4253};
 			azimut=346.086;
 			offsetY=0.161616;
-			id=29;
+			id=36;
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
@@ -503,7 +930,7 @@ class Mission
 			position[]={5044.3901,162.70749,4652.5093};
 			azimut=346.086;
 			offsetY=0.309764;
-			id=30;
+			id=37;
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
@@ -514,7 +941,7 @@ class Mission
 			position[]={5037.9121,162.62032,4648.3203};
 			azimut=308.07999;
 			offsetY=0.388046;
-			id=31;
+			id=38;
 			side="EMPTY";
 			vehicle="Land_Mil_WiredFence_F";
 			skill=0.60000002;
@@ -524,7 +951,7 @@ class Mission
 		{
 			position[]={5033.2212,162.5471,4667.1147};
 			azimut=131.53999;
-			id=32;
+			id=39;
 			side="EMPTY";
 			vehicle="Land_LampShabby_F";
 			skill=0.60000002;
@@ -534,7 +961,7 @@ class Mission
 		{
 			position[]={5060.042,163.11443,4691.0317};
 			azimut=348.42099;
-			id=33;
+			id=40;
 			side="EMPTY";
 			vehicle="Land_LampStreet_F";
 			skill=0.60000002;
@@ -544,7 +971,7 @@ class Mission
 		{
 			position[]={5015.8599,162.75394,4685.8232};
 			azimut=397.91599;
-			id=34;
+			id=41;
 			side="EMPTY";
 			vehicle="Land_LampStreet_F";
 			skill=0.60000002;
@@ -554,7 +981,7 @@ class Mission
 		{
 			position[]={5005.9805,157.68385,4767.5215};
 			azimut=81.855202;
-			id=35;
+			id=42;
 			side="EMPTY";
 			vehicle="Land_LampStreet_F";
 			skill=0.60000002;
@@ -564,7 +991,7 @@ class Mission
 		{
 			position[]={5079.6738,163.38196,4605.4116};
 			azimut=316.28699;
-			id=36;
+			id=43;
 			side="EMPTY";
 			vehicle="Land_LampStreet_F";
 			skill=0.60000002;
@@ -575,62 +1002,76 @@ class Mission
 			position[]={5056.5474,162.71933,4665.7935};
 			azimut=80.049797;
 			offsetY=-0.0176697;
-			id=37;
+			id=44;
 			side="EMPTY";
 			vehicle="Land_Cargo_Patrol_V2_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 80.0498;this setposATL [5056.547363,4665.793457,-0.0176697];this setVectorUp [0,0,1]";
 		};
+		class Item25
+		{
+			position[]={2679.0427,143.36079,4601.0322};
+			azimut=191.577;
+			special="NONE";
+			id=45;
+			side="EMPTY";
+			vehicle="B_G_Offroad_01_F";
+			leader=1;
+			skill=0.60000002;
+			text="aaa";
+		};
 	};
 	class Markers
 	{
-		items=6;
+		items=5;
 		class Item0
 		{
-			position[]={5112.8662,164.04373,4693.2754};
-			name="BOMB01";
+			position[]={5043.2778,162.52902,4664.2129};
+			name="bomb01";
+			text=" Transformadores";
 			type="hd_objective";
 			colorName="ColorGreen";
 		};
 		class Item1
 		{
-			position[]={2682.1963,143.04964,4591.0908};
-			name="CONTRABAND";
+			position[]={2692.1338,143.01344,4590.7241};
+			name="contra01";
 			text=" Alexei Drovanov";
-			type="n_maint";
+			type="hd_objective";
+			colorName="ColorGreen";
 		};
 		class Item2
 		{
-			position[]={2059.0645,154.57249,7705.8574};
+			position[]={8607.5625,14.007379,5709.6255};
 			name="aa1";
-			text=" Unidade Anti Aérea";
+			text=" Bateria Anti-Aérea";
 			type="o_unknown";
+			colorName="ColorEAST";
 		};
 		class Item3
 		{
-			position[]={8713.6436,28.16894,5960.1689};
-			name="aa1_1";
-			text=" Unidade Anti Aérea";
-			type="o_unknown";
+			position[]={4628.8545,148.81854,5898.0308};
+			name="hq01";
+			text=" Área Segura";
+			type="hd_flag";
+			colorName="ColorGreen";
 		};
 		class Item4
 		{
-			position[]={9703.6895,163.63913,2906.498};
-			name="aa1_2";
-			text=" Unidade Anti Aérea";
-			type="o_unknown";
-		};
-		class Item5
-		{
-			position[]={2642.812,429.88199,1247.3958};
-			name="aa1_3";
-			text=" Unidade Anti Aérea";
-			type="o_unknown";
+			position[]={8027.2852,21.754377,5084.8823};
+			name="aaa";
+			markerType="ELLIPSE";
+			type="Empty";
+			colorName="ColorEAST";
+			fillName="Border";
+			a=4500;
+			b=3580;
+			drawBorder=1;
 		};
 	};
 	class Sensors
 	{
-		items=1;
+		items=4;
 		class Item0
 		{
 			position[]={4981.7246,128.19954,4917.8652};
@@ -648,6 +1089,56 @@ class Mission
 			class Effects
 			{
 			};
+		};
+		class Item1
+		{
+			position[]={4973.166,155.91383,4663.8101};
+			a=0;
+			b=0;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="!alive trans01 && !alive trans02 && !alive trans03;";
+			class Effects
+			{
+			};
+			synchronizations[]={3,5};
+			syncId=7;
+		};
+		class Item2
+		{
+			position[]={2691.645,142.96895,4590.4072};
+			a=2;
+			b=2;
+			angle=11.3966;
+			rectangular=1;
+			activationBy="MEMBER";
+			interruptable=1;
+			age="UNKNOWN";
+			idVehicle=13;
+			class Effects
+			{
+			};
+			synchronizations[]={4,2};
+			syncId=8;
+		};
+		class Item3
+		{
+			position[]={4624.3447,149.0103,5899.0659};
+			a=30;
+			b=30;
+			angle=108.409;
+			rectangular=1;
+			activationBy="MEMBER";
+			interruptable=1;
+			age="UNKNOWN";
+			idVehicle=13;
+			class Effects
+			{
+			};
+			synchronizations[]={6};
+			syncId=9;
 		};
 	};
 };
