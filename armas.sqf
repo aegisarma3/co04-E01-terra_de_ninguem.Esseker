@@ -1,4 +1,4 @@
-private ["_obj","_dat","_cString","_adString"];
+/*private ["_obj","_dat","_cString","_adString"];
 
 _obj = objNull;_dat = [];_adString = "CAN_COLLIDE";
 _cString = {_obj = createVehicle [(_dat select 0), call compile (_dat select 1), [], 0, _adString];if((_dat select 4) == 0) then {_obj enableSimulation false};_obj setdir (_dat select 2);if((_dat select 3) == -100) then {_obj setposATL (call compile (_dat select 1))} else {_obj setposASL [((call compile (_dat select 1)) select 0),((call compile (_dat select 1)) select 1),(_dat select 3)]};if((_dat select 5) == 0) then {_obj setVectorUp [0,0,1]} else {_obj setVectorUp (surfacenormal (getPosATL _obj))};if(count (_dat select 6) > 0) then {{call _x} foreach (_dat select 6)}};
@@ -48,7 +48,7 @@ _dat = ["Land_ExtensionCord_F","[2693.484131,4586.986328,5.74663]",4.51979,-100,
 _dat = ["Land_Portable_generator_F","[2694.563965,4588.162598,4.60802]",4.51979,-100,0,0,[]];call _cString;
 
 _dat = ["Land_PortableLight_single_F","[2694.40625,4585.0205078,4.98598]",158.623,-100,1,0,[]];call _cString;
-_dat = ["Land_PortableLight_single_F","[2690.834229,4592.13623,4.54292]",317.588,-100,1,0,[]];call _cString;
+_dat = ["Land_PortableLight_single_F","[2690.834229,4592.13623,4.54292]",317.588,-100,1,0,[]];call _cString;*/
 
 //_dat = ["Sign_Arrow_F","[2694.904541,4591.0258789,4.97559]",332.992,-100,0,0,[]];call _cString;
 //_dat = ["Sign_Arrow_F","[2695.0305176,4590.120605,4.51431]",12.3858,-100,0,0,[]];call _cString;
